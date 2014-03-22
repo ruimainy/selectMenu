@@ -1,0 +1,15 @@
+*{margin: 0;padding: 0; list-style: none;}
+
+.s_jqSelect{width:300px;margin:20px 0;background: #ccc;padding-bottom: 10px;}
+
+.s_title{width: 100px;height: 30px;background: #eee;margin:5px;}
+
+.s_wrap{width: 250px;/*height:130px;*/background: #999;display: none;position: relative;overflow: hidden;}
+
+.s_wrap ul{width:210px;display:block;position: absolute;top:0;left:0;background: #0f0;}
+.s_wrap li{background: #f1f1f1;margin:5px 0;height: 25px;overflow: hidden;display: block;}
+.s_wrap li:hover{background: #777;color:#000;}
+
+.s_result{width: 200px;height: 30px;background: #eee;margin:5px;}
+
+

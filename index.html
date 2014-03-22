@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html> 
+<head> 
+<meta charset="utf-8"> 
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>select菜单</title>
+<meta name="description" content="">
+<meta name="keywords" content="">
+
+<link href="css/idb.drapBarPlus.css" rel="stylesheet" />
+<link href="css/idb.dropDownBox.css" rel="stylesheet" />
+
+<script src="js/jquery-1.7.2.js"></script>
+<script src="js/idb.dropDownBox.js"></script>
+<script src="js/idb.drapBarPlus.js"></script>
+<script src="js/selectJson.js"></script>
+
+<script type="text/javascript">
+$(function(){
+	var idbSelectBar = null;
+
+	var config = {
+		title: '下拉菜单',
+		emptyContent: '没数据默认就是它',
+		field: 'like', //标示显示哪个数据栏的东西
+		onSelectChanged:change,
+		customBar: true, //是否采取自定义滚动条
+		maxItem:3, //大于maxItem是
+		containerHeight: '160px'
+	}
+ 
+	idbSelectBar = $("#jqSelect").exIdbSelect(config);
+	idbSelectBar.setData( jsonData );
+	idbSelectBar.setDefaultSelectIndex(2);
+
+	$("#menu").exDrapBar({"containerHeight":"100px"})
+});
+
+function change(inx, d){
+	//接收用户选择的结果所对应的JSON数据
+	console.log(d)
+}
+</script>
+</head>
+<body>
+	<div id="jqSelect" class="s_jqSelect"></div>
+</body>
+</html>
